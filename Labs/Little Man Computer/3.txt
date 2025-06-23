@@ -1,0 +1,22 @@
+        INP
+        STA a
+        INP
+        STA b
+        LDA zero
+        STA result
+loop    LDA result
+        ADD b
+        STA result
+        LDA a
+        SUB one
+        STA a
+        BRZ end
+        BRA loop
+end     LDA result
+        OUT
+        HLT
+a       DAT
+b       DAT
+result  DAT
+zero    DAT 0
+one     DAT 1
